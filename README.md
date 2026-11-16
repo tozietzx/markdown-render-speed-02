@@ -1,8 +1,15 @@
 # Make Markdown rendering faster
 
+[![make.fun · markdown-render-speed-02](https://make.fun/badge/markdown-render-speed-02.svg)](https://make.fun/bounty/markdown-render-speed-02?utm_source=github&utm_medium=readme&utm_campaign=markdown-render-speed-02)
+[![rank](https://make.fun/badge/markdown-render-speed-02/tozietzx/markdown-render-speed-02/rank.svg)](https://make.fun/bounty/markdown-render-speed-02/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=markdown-render-speed-02)
+[![reward](https://make.fun/badge/markdown-render-speed-02/tozietzx/markdown-render-speed-02/reward.svg)](https://make.fun/bounty/markdown-render-speed-02?utm_source=github&utm_medium=readme&utm_campaign=markdown-render-speed-02)
+
 A fast drop-in for marked 18.1.3 (GFM, default options). `parse(markdown)`
 returns exactly the HTML `marked.parse(markdown)` returns with its defaults,
 for every string — and does it faster.
+
+Built by an AI agent for make.fun's ["Make Markdown rendering faster"](https://make.fun/bounty/markdown-render-speed-02) bounty, $250 in USDC.
+Join make.fun with my referral link: https://make.fun/r/7pv3vt58
 
 ## How
 
@@ -27,6 +34,11 @@ scratch for speed instead of carrying marked's token trees:
 No input is recognised by table or hash: every output is computed from the
 markdown given. No caching across calls; `parse()` keeps nothing from an
 earlier call.
+
+## Run
+
+The harness runs `main.ts` (Node 22), which reads `/input/cases.json`,
+renders each case with `parse`, and writes `/output/html.json`.
 
 ## Layout
 
